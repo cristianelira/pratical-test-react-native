@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "sements",
+    "slug": "sements",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
