@@ -2,12 +2,18 @@ import React from 'react'
 
 import { Container, ColorCategory, NameCategory } from './styles'
 
+interface CategoryCardProps {
+  display_name: string
+  list_name_encoded: string
+  
+}
+
 interface Props {
-  name: string
+  data: CategoryCardProps
   onPress: () => void;
 }
 
-export function CategoryCard({ name, onPress }: Props) {
+export function CategoryCard({ data, onPress }: Props) {
   const generateColor = () => {
     const randomColor = Math.floor(Math.random() * 16777215)
       .toString(16)
@@ -20,7 +26,7 @@ export function CategoryCard({ name, onPress }: Props) {
       <ColorCategory
         style={{ backgroundColor: generateColor() }}
       ></ColorCategory>
-      <NameCategory>{name}</NameCategory>
+      <NameCategory>{data.display_name}</NameCategory>
     </Container>
   )
 }

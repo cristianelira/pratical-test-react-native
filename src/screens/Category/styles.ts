@@ -1,5 +1,7 @@
-import styled from 'styled-components/native';
+import styled from 'styled-components/native'
 import { RFValue } from 'react-native-responsive-fontsize'
+import { FlatList, FlatListProps } from 'react-native'
+import { BookDTO } from '../../dtos/BookDTO'
 
 export const Container = styled.View`
   flex: 1;
@@ -20,6 +22,10 @@ export const CategoryName = styled.Text`
   font-size: ${RFValue(22)}px;
 `
 export const Books = styled.View`
-  margin-top: ${RFValue(24)}px;
   flex: 1;
 `
+export const ListBooks = styled(
+  FlatList as new (props: FlatListProps<BookDTO>) => FlatList<BookDTO>
+).attrs({
+  showsVerticalScrollIndicator: false
+})``

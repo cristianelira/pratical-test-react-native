@@ -1,6 +1,9 @@
 import styled from 'styled-components/native'
+import { FlatList, FlatListProps } from 'react-native'
 import { RFValue } from 'react-native-responsive-fontsize'
 import { Feather, Ionicons } from '@expo/vector-icons'
+import { BookDTO } from '../../dtos/BookDTO'
+import { CategoryDTO } from '../../dtos/CategoryDTO'
 
 export const Container = styled.View`
   flex: 1;
@@ -54,6 +57,15 @@ export const ScrollBooks = styled.ScrollView``
 export const ForYou = styled.View`
   margin-top: ${RFValue(24)}px;
 `
+export const ForYouList = styled(
+  FlatList as new (props: FlatListProps<BookDTO>) => FlatList<BookDTO>
+).attrs({
+  horizontal: true,
+  showsHorizontalScrollIndicator: false,
+  contentContainerStyle: { paddingBottom: 10 }
+})`
+  margin-top: ${RFValue(16)}px;
+`
 
 export const CategoryName = styled.Text`
   color: ${({ theme }) => theme.colors.text};
@@ -67,7 +79,24 @@ export const Categorys = styled.View`
   margin-top: ${RFValue(16)}px;
 `
 
+export const CategoryList = styled(
+  FlatList as new (props: FlatListProps<CategoryDTO>) => FlatList<CategoryDTO>
+).attrs({
+  horizontal: true,
+  showsHorizontalScrollIndicator: false
+})``
+
 export const MostRead = styled.View``
+
+export const MostReadList = styled(
+  FlatList as new (props: FlatListProps<BookDTO>) => FlatList<BookDTO>
+).attrs({
+  horizontal: true,
+  showsHorizontalScrollIndicator: false,
+  contentContainerStyle: { paddingBottom: 10 }
+})`
+  margin-top: ${RFValue(16)}px;
+`
 
 export const ViewNavigation = styled.View`
   width: 100%;
