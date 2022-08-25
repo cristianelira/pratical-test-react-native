@@ -1,6 +1,7 @@
 import React from 'react'
 import { BookCard } from '../../components/BookCard'
 import { CategoryCard } from '../../components/CategoryCard'
+import { useNavigation } from '@react-navigation/native'
 
 import {
   Container,
@@ -24,6 +25,16 @@ import {
 } from './styles'
 
 export function Home() {
+  const navigation = useNavigation<any>()
+
+  function handleBook() {
+    navigation.navigate('Book')
+  }
+
+  function handleCategory() {
+    navigation.navigate('Category')
+  }
+
   return (
     <Container>
       <Header>
@@ -47,15 +58,15 @@ export function Home() {
 
         <ForYou>
           <CategoryName>Para você</CategoryName>
-          <BookCard />
+          <BookCard onPress={() => handleBook()} />
         </ForYou>
         <Categorys>
           <CategoryName>Categorias</CategoryName>
-          <CategoryCard name="Biografia" />
+          <CategoryCard name="Biografia" onPress={() => handleCategory()} />
         </Categorys>
         <MostRead>
           <CategoryName>Os mais lidos da semana</CategoryName>
-          <BookCard />
+          <BookCard onPress={() => handleBook()} />
         </MostRead>
       </ScrollBooks>
 

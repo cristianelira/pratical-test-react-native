@@ -2,9 +2,13 @@ import React from 'react'
 
 import { Container, BackIcon } from './styles'
 
-export function BackButton() {
+interface Props{
+  onPress: () => void;
+}
+
+export function BackButton({onPress}: Props) {
   return (
-    <Container>
+    <Container onPress={onPress}>
       <BackIcon name="arrow-back" />
     </Container>
   )

@@ -2,9 +2,13 @@ import React from 'react'
 
 import { Container, Book, ImgBook, Title, Autor, Stars, Star } from './styles'
 
-export function BookCard() {
+interface Props {
+  onPress: () => void;
+}
+
+export function BookCard({onPress}:Props) {
   return (
-    <Container>
+    <Container onPress={onPress}>
       <Book>
         <ImgBook source={require('../../global/images/book.png')} />
         <Title numberOfLines={2}>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Linking } from 'react-native'
 import { BackButton } from '../../components/BackButton'
+import { useNavigation } from '@react-navigation/native'
 
 import {
   Container,
@@ -26,10 +27,16 @@ import {
 } from './styles'
 
 export function Book() {
+  const navigation = useNavigation<any>()
+
+  function handleBack() {
+    navigation.goBack()
+  }
+
   return (
     <Container>
       <Header>
-        <BackButton />
+        <BackButton onPress={() => handleBack()} />
         <RightIcon>
           <FavIcon name="heart" />
           <ShareIcon name="share-2" />
