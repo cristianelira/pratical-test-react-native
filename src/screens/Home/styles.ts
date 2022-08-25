@@ -62,7 +62,10 @@ export const CategoryName = styled.Text`
   margin-left: ${RFValue(16)}px;
 `
 
-export const Categorys = styled.View``
+export const Categorys = styled.View`
+  margin-bottom: ${RFValue(32)}px;
+  margin-top: ${RFValue(16)}px;
+`
 
 export const MostRead = styled.View``
 

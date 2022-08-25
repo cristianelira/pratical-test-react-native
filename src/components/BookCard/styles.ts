@@ -7,6 +7,7 @@ export const Container = styled(RectButton)`
   flex: 1;
   background-color: ${({ theme }) => theme.colors.white};
   margin-bottom: ${RFValue(24)}px;
+  margin-top: ${RFValue(16)}px;
 `
 
 export const Book = styled.View`

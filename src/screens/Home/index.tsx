@@ -1,5 +1,6 @@
 import React from 'react'
 import { BookCard } from '../../components/BookCard'
+import { CategoryCard } from '../../components/CategoryCard'
 
 import {
   Container,
@@ -50,6 +51,7 @@ export function Home() {
         </ForYou>
         <Categorys>
           <CategoryName>Categorias</CategoryName>
+          <CategoryCard name="Biografia" />
         </Categorys>
         <MostRead>
           <CategoryName>Os mais lidos da semana</CategoryName>
