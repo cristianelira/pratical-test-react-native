@@ -10,6 +10,7 @@ import {
   Lato_900Black, 
   Lato_700Bold 
 } from '@expo-google-fonts/lato'
+import { Home } from './src/screens/Home';
 
 
 
@@ -38,7 +39,7 @@ export default function App() {
   if (!fontsLoaded) return null
   return (
     <ThemeProvider theme={theme}>
-    <Category/>
+    <Home />
     </ThemeProvider>
   );
 }
