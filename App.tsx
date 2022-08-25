@@ -9,6 +9,7 @@ import {
   Lato_900Black, 
   Lato_700Bold 
 } from '@expo-google-fonts/lato'
+import { BookCard } from './src/components/BookCard';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -35,7 +36,7 @@ export default function App() {
   if (!fontsLoaded) return null
   return (
     <ThemeProvider theme={theme}>
-    <Book />
+    <BookCard/>
     </ThemeProvider>
   );
 }
