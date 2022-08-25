@@ -1,7 +1,6 @@
-import styled from 'styled-components/native';
+import styled from 'styled-components/native'
 import { RFValue } from 'react-native-responsive-fontsize'
 import { Feather, Ionicons } from '@expo/vector-icons'
-
 
 export const Container = styled.View`
   flex: 1;
@@ -15,11 +14,6 @@ export const Header = styled.View`
   justify-content: space-between;
   align-items: center;
   margin-top: ${RFValue(12)}px;
-`
-
-export const BackIcon = styled(Ionicons)`
-  font-size: ${RFValue(24)}px;
-  margin-left: ${RFValue(16)}px;
 `
 export const RightIcon = styled.View`
   flex-direction: row;

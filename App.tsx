@@ -3,13 +3,15 @@ import * as SplashScreen from 'expo-splash-screen'
 import { ThemeProvider } from 'styled-components';
 import theme from './src/global/styles/theme';
 import { Book } from './src/screens/Book';
+import { Category } from './src/screens/Category';
 import { 
   useFonts, 
   Lato_400Regular, 
   Lato_900Black, 
   Lato_700Bold 
 } from '@expo-google-fonts/lato'
-import { BookCard } from './src/components/BookCard';
+
+
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -36,7 +38,7 @@ export default function App() {
   if (!fontsLoaded) return null
   return (
     <ThemeProvider theme={theme}>
-    <BookCard/>
+    <Category/>
     </ThemeProvider>
   );
 }
