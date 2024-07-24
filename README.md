@@ -20,5 +20,6 @@
 
 # Aplicação pronta:
 
-
-https://github.com/user-attachments/assets/788738e0-2c96-45d0-9eb9-ba32abae8f98
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/8dc96ac1-93c1-44e8-80e4-468d8df7c0ae" alt="animated" />
+</p>
