@@ -1,6 +1,6 @@
 # Descrição
 
-- Projeto criado como parte do processo de seleção para a vaga de Desenvolvedor React Native na empresa Ubelix (projeto original [aqui](https://github.com/Ubelix/pratical-test-react-native)).
+- Projeto criado como parte de avaliação na empresa Ubelix (projeto original [aqui](https://github.com/Ubelix/pratical-test-react-native)).
 - Esta avaliação prática possui por finalidade análisar minhas competências técnicas com React Native, analisando a estrutura e boas práticas de desenvolvimento.
 - Foram utilizados conhecimentos de Expo, Styled Component, Componentização, Navegação e consumo de API
 
